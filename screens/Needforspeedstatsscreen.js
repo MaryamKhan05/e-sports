@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Image} from 'react-native';
+import { View, StyleSheet, Image,TouchableOpacity,ScrollView} from 'react-native';
 import  Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
 import { 
     Avatar,
@@ -8,9 +8,21 @@ import {
     } from 'react-native-paper';
    
 
-const AsphaltNitroScreen =({navigation}) => {
+const Needforspeedstatsscreen =({navigation}) => {
     return (
         <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,10)', justifyContent: 'center', alignItems: 'center',}} >
+            <ScrollView   
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}>
+             <View style={{justifyContent: 'center', alignItems: 'center',}}>
+                <TouchableOpacity>
+                <Icon onPress={() => navigation.navigate('')} style={{padding:12,}} name="format-list-bulleted" size={30} color ='white'/>
+
+                </TouchableOpacity>
+           
+            </View>
+
+
             <View style={styles.container1}>
                
                 <Text style={{padding:10, fontWeight:'bold', color :'#FFB85D', fontStyle:'oswald', fontSize:20,paddingLeft:24,}}>Game Winner 
@@ -100,17 +112,18 @@ const AsphaltNitroScreen =({navigation}) => {
 
                 </View>
 
-
+              
             </View>
+            </ScrollView>
         </View>      
     );
 };
-export default AsphaltNitroScreen;
+export default Needforspeedstatsscreen;
 
 const styles = StyleSheet.create({
     container1:{
         width: 350,
-        height:'18%',
+        height:'8%',
         backgroundColor: 'white',
         borderRadius: 10,
         elevation: 50,

@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { View, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView, StatusBar} from 'react-native';
+import { View, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView, StatusBar, Flatlist,} from 'react-native';
 import  Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
 import { 
     Avatar,
     Text,
-    TouchableRipple,
     } from 'react-native-paper';
    
 
@@ -14,7 +13,17 @@ const AllStatsScreen =({navigation}) => {
         <View style={{ }}>
         
         <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,10)', justifyContent: 'center', alignItems: 'center',}} >
-        <ScrollView  stickyHeaderIndices={[]}>
+        <ScrollView  
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+         >
+        <View style={{justifyContent: 'center', alignItems: 'center',}}>
+                <TouchableOpacity>
+                <Icon onPress={() => navigation.navigate('')} style={{padding:12,}} name="format-list-bulleted" size={30} color ='white'/>
+
+                </TouchableOpacity>
+           
+            </View>
             <View style={styles.container1}>  <Text style={{padding:10, fontWeight:'bold', color :'#FF5412', fontStyle:'oswald', fontSize:20,paddingLeft:24,}}>Game Winner 
                     <Icon style={{padding:10,}} name="trophy" size={20} color ='#FFB85D'/>
                 </Text>

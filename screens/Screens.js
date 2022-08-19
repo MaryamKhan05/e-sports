@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import { StyleSheet,
 View,
 Text } from 'react-native';
-import Swiper from 'react-native-swiper';
+//import Swiper from 'react-native-swiper';
 
 const Screens =({navigation}) =>   {
 return (
@@ -42,4 +42,4 @@ dot:{
     marginTop: 3, 
     marginBottom: 3,
 }
-});
+});*/

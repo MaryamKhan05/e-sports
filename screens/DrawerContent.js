@@ -23,25 +23,26 @@ import {
   const DrawerContent =({navigation}) => {
 
     return (
-        <View style={{flex:1, paddingVertical:0}}>
+        <View style={{flex:1, paddingVertical:0,}}>
             <DrawerContentScrollView>
                 <View style={styles.drawerContent}>
-                    <View style={styles.userInfoSection}>
-                    <Avatar.Image 
-                                source={{
-                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
-                                }}
-                                size={50}
-                            />
-
+                  <View style={{}}>
+                  <View style={styles.userInfoSection}>
+                    <Avatar.Image
+                    source={require('./images/avatar2.jpg')} 
+                    size={70}
+                    />
                     </View>
+
                     <View style={{marginLeft:15, flexDirection:'column'}}>
                                 <Title style={styles.title}>Maryam Khan</Title>
                                 <Caption style={styles.caption}>maryam@gmail.com</Caption>
                     </View>
-                </View>
+                 </View>
+                 </View>
+                    
                
-                  <Drawer.Section style={styles.drawerSection}>
+                <Drawer.Section style={styles.drawerSection}>
                   <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -64,17 +65,7 @@ import {
                             label="Notifications"
                             onPress={() => {navigation.navigate('Notifications')}}
                         />
-                         <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="bell" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
-                            label="profile update"
-                            onPress={() => {navigation.navigate('Update')}}
-                        />
+                       
                           <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -138,6 +129,7 @@ const styles = StyleSheet.create({
     },
     userInfoSection: {
       paddingLeft: 20,
+      paddingTop:20,
     },
     title: {
       fontSize: 16,

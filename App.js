@@ -10,17 +10,18 @@ import {
 
 
 import HomeScreen from './screens/HomeScreen';
-import DetailsScreen from './screens/DetailsScreen';
 import NotificationsScreen from './screens/NotificationsScreen';
 import DrawerContent from './screens/DrawerContent';
 import UpdateScreen from './screens/UpdateScreen';
 import AsphaltNitroScreen from './screens/AsphaltNitroScreen';
-import RegistrationScreen from './screens/RegistrationScreen';
-import Screens from './screens/Screens';
+//import RegistrationScreen from './screens/RegistrationScreen';
+//import Screens from './screens/Screens';
 import AllStatsScreen from './screens/AllStatsScreen';
 import StatsScreen from './screens/StatsScreen';
 import Needforspeedstatsscreen from './screens/Needforspeedstatsscreen';
 import PubgStatsScreen from './screens/PubgStatsScreen';
+import SettingScreen from './screens/SettingScreen';
+import TabViewScreens from './screens/TabViewScreens';
 
 /*function Feed({ navigation }) {
   return (
@@ -62,15 +63,17 @@ function MyDrawer() {
     >
        <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      <Drawer.Screen name="Details" component={DetailsScreen} />
       <Drawer.Screen name="Update" component={UpdateScreen} />
-      <Drawer.Screen name="Nitro" component={AsphaltNitroScreen} />  
-      <Drawer.Screen name="Registration" component={RegistrationScreen} /> 
-      <Drawer.Screen name="Swwiper" component={Screens} />  
-      <Drawer.Screen name="AllStats" component={AllStatsScreen} />  
-      <Drawer.Screen name="Stats" component={StatsScreen} />  
-      <Drawer.Screen name="NeedForSpeed" component={Needforspeedstatsscreen} />  
-      <Drawer.Screen name="Pubg" component={PubgStatsScreen} />  
+      <Drawer.Screen name="Nitro" component={AsphaltNitroScreen} />
+      <Drawer.Screen name="AllStats" component={AllStatsScreen} />
+      <Drawer.Screen name="Stats" component={StatsScreen} />
+      <Drawer.Screen name="NeedForSpeed" component={Needforspeedstatsscreen} />
+      <Drawer.Screen name="Pubg" component={PubgStatsScreen} />
+      <Drawer.Screen name="Setting" component={SettingScreen} />
+      <Drawer.Screen name="Tab" component={TabViewScreens} />
+
+
+
 
     </Drawer.Navigator>
   );

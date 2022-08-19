@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet, Image, TouchableOpacity,ScrollView,} from 'react-native';
 import  Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import { 
     Avatar,
     Text,
@@ -8,13 +9,15 @@ import {
     } from 'react-native-paper';
    
 
-const AsphaltNitroScreen =({navigation}) => {
+const PubgStatsScreen =({navigation}) => {
     return (
         <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,10)', justifyContent: 'center', alignItems: 'center',}} >
-            <ScrollView>
+            <ScrollView  
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}>
             <View style={{justifyContent: 'center', alignItems: 'center',}}>
                 <TouchableOpacity>
-                <Icon onPress={() => navigation.navigate('')} style={{padding:10,}} name="bars" size={40} color ='white'/>
+                <Icon onPress={() => navigation.navigate('')} style={{padding:12,}} name="format-list-bulleted" size={30} color ='white'/>
 
                 </TouchableOpacity>
            
@@ -54,7 +57,7 @@ const AsphaltNitroScreen =({navigation}) => {
         </View>      
     );
 };
-export default AsphaltNitroScreen;
+export default PubgStatsScreen;
 
 const styles = StyleSheet.create({
     container1:{
@@ -63,7 +66,5 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 10,
         elevation: 50,
-       
-
     }
 })

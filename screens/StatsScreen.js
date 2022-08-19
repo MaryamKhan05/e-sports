@@ -7,18 +7,17 @@ import {
     } from 'react-native-paper';
    
 
-const AllStatsScreen =({navigation}) => {
+const StatsScreen =({navigation}) => {
     return (
 
        
         
         <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.8)', justifyContent: 'center', alignItems: 'center',}} >
             <View style={styles.container1}>
-
             <View style={{flexDirection:'column'}}>
             
             <View style={{flexDirection:'row',padding:10,justifyContent: 'center', alignItems: 'center' }}>
-           <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('Pubg')}>
            <View style={{justifyContent: 'center', alignItems: 'center', padding:20 }} >
                 <View  style={{borderColor:'white',borderWidth:2, borderRadius:50,}}>
                 <Avatar.Image
@@ -29,7 +28,7 @@ const AllStatsScreen =({navigation}) => {
             </View>
            </TouchableOpacity>
             
-           <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('Nitro')}>
            <View style={{justifyContent: 'center', alignItems: 'center', padding:20 }} >
                 <View  style={{borderColor:'white',borderWidth:2, borderRadius:50,}}>
                 <Avatar.Image
@@ -45,12 +44,11 @@ const AllStatsScreen =({navigation}) => {
             <View style={{justifyContent: 'center', alignItems: 'center',}}>
             <View style={{backgroundColor:'#FF5412', borderRadius:2, width:260, height:5,justifyContent: 'center', alignItems: 'center',}}> 
             </View>
-
             </View>
             
 
             <View style={{flexDirection:'row',padding:10, justifyContent: 'center', alignItems: 'center' }}>
-           <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('NeedForSpeed')}>
            <View style={{justifyContent: 'center', alignItems: 'center', padding:20 }} >
                 <View  style={{borderColor:'white',borderWidth:2, borderRadius:50,}}>
                 <Avatar.Image
@@ -61,27 +59,21 @@ const AllStatsScreen =({navigation}) => {
             </View>
            </TouchableOpacity>
             
-           <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('AllStats')}>
            <View style={{justifyContent: 'center', alignItems: 'center', padding:20 }} >
                 <View  style={{ justifyContent: 'center', alignItems: 'center', borderColor:'white',borderWidth:2, borderRadius:50, backgroundColor:'black',width:72,height:72,}}>
-                <Text style={{color:'#FF5412',fontSize:30,}}>All</Text>
+                <Text  style={{color:'#FF5412',fontSize:30,}}>All</Text>
                 </View>
             </View>
            </TouchableOpacity>  
             </View>
-
-
-
-
-
-
 
             </View>
             </View>
         </View>
     );
 };
-export default AllStatsScreen;
+export default StatsScreen;
 
 const styles = StyleSheet.create({
     container1:{
